@@ -1,0 +1,32 @@
+{
+  "name": "angularjs-de-seed",
+  "version": "0.0.0",
+  "authors": [
+    "Sascha Brink <sascha.brink@gmail.com>",
+    "Robin Böhm <robin.boehm@angularjs.de>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-animate": "~1.5.0",
+    "angular-i18n": "~1.5.0",
+    "angular-messages": "~1.5.0",
+    "angular-mocks": "~1.5.0",
+    "angular-route": "~1.5.0",
+    "angular-touch": "~1.5.0",
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4"
+  }
+}

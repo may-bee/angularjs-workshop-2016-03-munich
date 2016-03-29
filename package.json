@@ -1,0 +1,67 @@
+{
+  "name": "ajs-workshop-seed",
+  "version": "0.0.1",
+  "description": "A simple seed project for AngularJS.DE workshops.",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "live-server",
+    "test": "karma start"
+  },
+  "keywords": [
+    "angularjs",
+    "angularjs-de",
+    "seed",
+    "workshop"
+  ],
+  "authors": [
+    "Sascha Brink <sascha.brink@angularjs.de>",
+    "Robin Böhm <robin.boehm@angularjs.de>",
+    "Elmar Burke <elmar.burke@angularjs.de"
+  ],
+  "homepage": "http://angularjs.de/",
+  "license": "MIT",
+  "devDependencies": {
+    "jasmine-core": "^2.3.4",
+    "karma": "0.12.37",
+    "karma-chrome-launcher": "0.2.0",
+    "karma-jasmine": "0.3.6",
+    "karma-ng-html2js-preprocessor": "0.1.0",
+    "karma-phantomjs-launcher": "0.2.0",
+    "phantomjs": "^1.9.18",
+    "live-server": "0.9.1",
+    "angular-mocks": "^1.5.2"
+  },
+  "dependencies": {
+    "@angular/router": "^0.2.0",
+    "angular": "^1.5.2",
+    "angular-animate": "^1.5.2",
+    "angular-i18n": "^1.5.2",
+    "angular-messages": "^1.5.2",
+    "angular-touch": "^1.5.2",
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.2"
+  },
+  "standard": {
+    "globals": [
+      "angular",
+      "module",
+      "inject",
+      "jasmine",
+      "describe",
+      "xdescribe",
+      "before",
+      "beforeEach",
+      "after",
+      "afterEach",
+      "it",
+      "xit",
+      "it",
+      "inject",
+      "expect",
+      "spyOn"
+    ]
+  }
+}
