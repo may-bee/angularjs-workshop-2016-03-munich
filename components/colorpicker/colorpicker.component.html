@@ -1,0 +1,28 @@
+<div style="height: 4rem; background-color: rgba({{$ctrl.r}}, {{$ctrl.g}}, {{$ctrl.b}}, {{$ctrl.a}});"></div>
+
+<table>
+    <tr>
+        <td>
+            <input type="range" ng-model="$ctrl.r" max="255">
+        </td>
+        <td>{{r}}</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="range" ng-model="$ctrl.g" max="255">
+        </td>
+        <td>{{g}}</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="range" ng-model="$ctrl.b" max="255">
+        </td>
+        <td>{{b}}</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="range" ng-model="$ctrl.a" max="1" step="0.01">
+        </td>
+        <td>{{t}}</td>
+    </tr>
+</table>
