@@ -2,7 +2,7 @@
 
 // Naming conventions! 
 // Prefixing!
-// Never access scope without a dot!
+// No expression without a dot! (especially for templates & scope access)
 
 angular.module('myApp.colorpicker', [])
     .component('colorpicker', {
