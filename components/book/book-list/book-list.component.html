@@ -1,0 +1,21 @@
+<h1>Book List:</h1>
+
+<div>
+    <input type="text" 
+           ng-model="$ctrl.search.$" 
+           placeholder="Search..." 
+           ng-change="$ctrl.resetAllOtherFilter('$')">
+    <input type="text" 
+           ng-model="$ctrl.search.title" 
+           placeholder="Search title..."  
+           ng-change="$ctrl.resetAllOtherFilter('title')">
+</div>
+
+<table>
+    <th></th>
+    <th ng-repeat="(key, value) in $ctrl.books[0]">{{key | uppercase}}</th>
+    <tr ng-repeat="n in $ctrl.books | filter:$ctrl.search">
+        <td><a ng-link="['BookDetail', {isbn: n.isbn}]"><span class="glyphicon glyphicon-book"></span></a></td>
+        <td ng-repeat="(key, value) in n">{{value}}</td>
+    </tr>
+</table>

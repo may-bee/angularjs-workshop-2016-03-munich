@@ -2,12 +2,12 @@
 page (for milliseconds). Furthermore, {{}} creates new span elements, which results
 in less performance. To also provide additional text next to the bound value, 
 you can use ng-bind-template. -->
-<h1>{{$ctrl.book.title}}</h1>
-<h2 ng-bind="$ctrl.book.title"></h2>
+<h1><a ng-link="['BookEdit', {isbn: $ctrl.book.isbn}]"><span class="glyphicon glyphicon-cog"></span></a>{{$ctrl.book.title}}</h1>
+<h2 ng-bind="$ctrl.book.subtitle"></h2>
 <!-- one-time-binding: disable synchronization by :: prefixing
 SIDE NOTE: Angular2 does not process synchronization by dirty checking anymore.
 Thus, disabling synchronization here is not necessary anymore in Angular2 to boost performance. -->
-<p>{{::$ctrl.book.abstract}}</p>
+<p>{{::$ctrl.book.abstract}}</p>    
 <footer><small ng-bind-template="ISBN: {{$ctrl.book.isbn}}"></small></footer>
 
 <hr>

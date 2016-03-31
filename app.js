@@ -1,6 +1,11 @@
 'use strict';
 
 angular.module('myApp', [
-    'myApp.colorpicker', 
-    'myApp.bookDetail'
+    // External Deps
+    'ngComponentRouter',
+    
+    // Internal Deps
+    'myApp.book',
+    'myApp.colorpicker' 
  ])
+    .value('$routerRootComponent', 'myApp')

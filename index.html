@@ -14,20 +14,10 @@
 
         <h1>Hello {{ name }}!</h1>
         <input type="text" ng-model="name" />
+        
+        <hr>
 
-        <hr>
-        
-        <colorpicker red="0" alpha="alpha"></colorpicker>
-        <colorpicker alpha="alpha"></colorpicker>
-        <colorpicker alpha="alpha"></colorpicker>
-        
-        <hr>
-        
-        <!-- no component without dash! -->
-        <!-- camel case names of components will be converted to snake case equivalent to DOM specification -->
-        <book-detail></book-detail>
-        
-        <hr>
+        <my-app></my-app>
 
     </div>
     <!-- 3rd-Party Libs -->
@@ -37,8 +27,12 @@
     <script src="node_modules/@angular/router/angular1/angular_1_router.js"></script>
     <!-- Application Files -->
     <script src="app.js"></script>
+    <script src="components/my-app.component.js"></script>
     <script src="components/colorpicker/colorpicker.component.js"></script>
-    <script src="components/book-detail/book-detail.component.js"></script>
+    <script src="components/book/book.component.js"></script>
+    <script src="components/book/book-detail/book-detail.component.js"></script>
+    <script src="components/book/book-list/book-list.component.js"></script>
+    <script src="components/book/book-edit/book-edit.component.js"></script>
     <script src="services/books-api/books-api.service.js"></script>
 </body>
 
