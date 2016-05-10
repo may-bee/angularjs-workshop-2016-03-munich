@@ -12,7 +12,7 @@ angular.module('myApp.book', [
         `,
         // ng-outlet is need whenever a routeConfig is defined in the same component
         $routeConfig: [
-            { path: '/', component: 'bookList', name: 'BookList' }, // name for ng-link directives!!!
+            { path: '/', component: 'bookList', name: 'BookList', useAsDefault: true }, // name for ng-link directives!!!
             { path: '/:isbn', component: 'bookDetail', name: 'BookDetail' },
             { path: '/:isbn/edit', component: 'bookEdit', name: 'BookEdit' }
         ]

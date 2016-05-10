@@ -1,11 +1,47 @@
 <h2>EDIT Book</h2>
 
-<form ng-submit="$ctrl.handleSubmit($ctrl.book)">
+<!-- use novalidate to deactivate the browser-specific HTML5 validation to consolidate the UI for all browsers -->
+<form name="$ctrl.submitForm" ng-submit="$ctrl.handleSubmit($ctrl.book)" novalidate>
 
-    <div class="form-group" ng-repeat="(key, value) in $ctrl.book">
-        <label>{{key | uppercase}}</label>
-        <textarea class="form-control" type="text" ng-model="$ctrl.book[key]"></textarea>
+    <div class="form-group">
+        <label>Title</label>
+        <input name="title" minlength="2" class="form-control" type="text" ng-model="$ctrl.book.title" required></input>
+        <span ng-show="$ctrl.submitForm.title.$touched">
+            <span ng-show="$ctrl.submitForm.title.$error.required">
+                <span class="help-text">Value required.</span>
+            </span>
+            <span ng-show="$ctrl.submitForm.title.$error.minlength">
+                <span class="help-text">Title too short. (At least length 2)</span>
+            </span>
+        </span>
+    </div>
+
+    <div class="form-group">
+        <label>Subtitle</label>
+        <input class="form-control" type="text" ng-model="$ctrl.book.subtitle" required></input>
+    </div>
+
+    <div class="form-group">
+        <label>Abstract</label>
+        <input class="form-control" type="text" ng-model="$ctrl.book.abstract" required></input>
+    </div>
+
+    <div class="form-group">
+        <label>Num. Pages</label>
+        <input class="form-control" type="text" ng-model="$ctrl.book.numPages" required></input>
+    </div>
+
+    <div class="form-group">
+        <label>Author</label>
+        <input class="form-control" type="text" ng-model="$ctrl.book.author" required></input>
+    </div>
+
+    <div class="form-group">
+        <label>Publisher</label>
+        <input class="form-control" type="text" ng-model="$ctrl.book.publisher.name" required></input>
     </div>
 
     <button type="submit" class="btn btn-default">Save book</button>
 </form>
+
+<pre>$ctrl.submitForm = {{$ctrl.submitForm | json}}</pre>

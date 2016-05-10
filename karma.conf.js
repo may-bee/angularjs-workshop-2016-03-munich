@@ -15,11 +15,11 @@ module.exports = function (config) {
       'node_modules/@angular/router/angular1/ng_route_shim.js',
       'node_modules/@angular/router/angular1/angular_1_router.js',
       'node_modules/angular-mocks/angular-mocks.js',
-      'app/app.js',
-      'app/components/**/*.html',
-      'app/components/**/*.js',
-      'app/services/**/*.js',
-      'app/filters/**/*.js'
+      'app.js',
+      'components/**/*.html',
+      'components/**/*.js',
+      'services/**/*.js',
+      'filters/**/*.js'
     ],
 
     // list of files to exclude
@@ -41,7 +41,7 @@ module.exports = function (config) {
     logLevel: config.LOG_DEBUG,
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: false,
+    autoWatch: true,
 
     // Start these browsers, currently available:
     // - Chrome
@@ -58,7 +58,7 @@ module.exports = function (config) {
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
-    singleRun: true,
+    singleRun: false,
 
     preprocessors: {
         'app/components/**/*.html': 'ng-html2js'

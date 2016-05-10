@@ -8,6 +8,6 @@ angular.module('myApp')
             <ng-outlet></ng-outlet>
         `,
         $routeConfig: [
-            { path: '/books/...', component: 'book' },
+            { path: '/books/...', component: 'book', useAsDefault: true},
         ]
     })
